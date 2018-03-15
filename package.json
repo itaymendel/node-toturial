@@ -1,8 +1,35 @@
 {
   "name": "examples",
   "dependencies": {
-    "chai": "^4.1.2"
+    "chai": "^4.1.2",
+    "mocha": "^5.0.4"
   },
-  "devDependencies": {},
-  "license": "SEE LICENSE IN LICENSE"
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "flow-bin": "^0.67.1",
+    "flow-remove-types": "^1.2.3"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "flow": "flow",
+    "flow:check": "flow check ./src/",
+    "flow:build": "flow-remove-types ./src/ -d ./lib/ --all --pretty",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ranm8/bits.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/ranm8/bits/issues"
+  },
+  "homepage": "https://github.com/ranm8/bits#readme",
+  "description": ""
 }
